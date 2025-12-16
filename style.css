@@ -16,7 +16,7 @@ body {
     line-height: 1.6;
     background-color: var(--color-background-light);
     color: var(--color-text-dark);
-    /* Keeps existing fix for horizontal scrollbar */
+    /* Retained: This is the global overflow-x fix */
     overflow-x: hidden;
     font-size: 16px; /* Base font size */
 }
@@ -31,7 +31,7 @@ a:hover {
 /* HEADER STYLING */
 header {
     background-color: var(--color-primary);
-    box-shadow: 0 4px 6px var(--color-shadow);
+    box-shadow: 0 4px 6px var(--color-shadow); /* Slightly softer shadow */
     position: fixed;
     width: 100%;
     top: 0;
@@ -39,7 +39,7 @@ header {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    height: 4.5rem;
+    height: 4.5rem; /* Use rem for consistent height */
     align-items: center;
     padding: 0.8rem 2rem;
 }
@@ -107,9 +107,8 @@ header .nav-button:hover {
         display: flex;
     }
 
-    /* FIX: Ensure ALL links display when the menu is open */
     header .main-nav ul li:not(:last-child) {
-        display: block; /* Overrides the previous 'display: none' */
+        display: none;
     }
     
     header .nav-toggle {
@@ -137,7 +136,7 @@ header .nav-button:hover {
         width: 90%;
     }
     header .logo {
-        margin-left: 0;
+        margin-left: 1.25rem;
     }
 }
 @media (min-width: 769px) {
@@ -162,7 +161,7 @@ header .nav-button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 4.5rem;
+    padding-top: 4.5rem; /* Adjust for fixed header height */
 }
 .hero-overlay {
     position: absolute;
@@ -170,7 +169,7 @@ header .nav-button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker for better text contrast */
 }
 .hero-content {
     z-index: 10;
@@ -180,7 +179,7 @@ header .nav-button:hover {
     padding: 20px;
 }
 .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: 4.5rem; /* Larger, more impactful heading */
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     font-weight: 900;
@@ -193,7 +192,7 @@ header .nav-button:hover {
     font-weight: 300;
 }
 .hero-content button {
-    background-color: var(--color-secondary);
+    background-color: var(--color-secondary); /* Use gold for button */
     color: var(--color-primary);
     padding: 1rem 2rem;
     font-size: 1.25em;
@@ -208,7 +207,7 @@ header .nav-button:hover {
     color: var(--color-primary);
 }
 .hero-content button:hover {
-    background-color: #ffc400;
+    background-color: #ffc400; /* Lighter gold on hover */
 }
 
 /* RESPONSIVE HERO TEXT SCALING */
@@ -234,11 +233,11 @@ header .nav-button:hover {
 }
 
 
-/* FEATURE ICONS SECTION STYLING */
+/* NEW FEATURE ICONS SECTION STYLING (The 5 items) */
 .feature-icons-section {
     padding: 40px 20px;
-    background-color: #ffffff;
-    border-bottom: 3px solid var(--color-primary);
+    background-color: #ffffff; /* Use white background to contrast with the light background of the next section */
+    border-bottom: 3px solid var(--color-primary); /* Premium dividing line */
 }
 
 .feature-icons-container {
@@ -252,6 +251,7 @@ header .nav-button:hover {
 }
 
 .feature-item {
+    /* Removes container/box effect */
     background: none; 
     border: none;
     padding: 0;
@@ -263,13 +263,13 @@ header .nav-button:hover {
 
 /* STYLING FOR FONT AWESOME ICONS in the FEATURE SECTION */
 .feature-icon {
-    font-size: 3rem;
-    color: var(--color-text-dark);
+    font-size: 3rem; /* Large icon size */
+    color: var(--color-text-dark); /* Monochrome color */
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
 .feature-item:hover .feature-icon {
-    color: var(--color-primary);
+    color: var(--color-primary); /* Subtle hover color change */
 }
 
 .feature-item p {
@@ -282,17 +282,17 @@ header .nav-button:hover {
 /* Responsiveness for Feature Icons */
 @media (max-width: 1024px) {
     .feature-icons-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablet landscape */
     }
 }
 @media (max-width: 768px) {
     .feature-icons-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet portrait */
     }
 }
 @media (max-width: 480px) {
     .feature-icons-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 column on small phones */
     }
 }
 
@@ -300,7 +300,7 @@ header .nav-button:hover {
 /* OUR TOP SELECTIONS STYLING */
 .meat-group-section {
     background-color: var(--color-background-light);
-    padding: 60px 20px;
+    padding: 60px 20px; /* Increased padding */
     text-align: center;
 }
 .meat-group-section h2{
@@ -313,37 +313,37 @@ header .nav-button:hover {
 .meat-group-section h2::after {
     content: '';
     width: 80px;
-    height: 4px;
+    height: 4px; /* Thicker underline */
     background: var(--color-secondary);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -15px;
+    bottom: -15px; /* Moved down */
 }
 
 .top-selection-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 40px; /* Increased gap */
     flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .top-selection-card {
-    /* REMOVED: flex: 1 1 45%; to allow full width control on small screens */
+    flex: 1 1 45%;
     min-width: 350px;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-left: 6px solid var(--color-secondary);
+    border-left: 6px solid var(--color-secondary); /* Thicker accent border */
     border-radius: 0.5rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow */
     padding: 30px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .top-selection-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px); /* More noticeable lift */
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -356,7 +356,7 @@ header .nav-button:hover {
 
 /* STYLING FOR ICONS IN TOP SELECTION CARDS */
 .top-selection-icon {
-    color: var(--color-secondary);
+    color: var(--color-secondary); /* Gold accent color */
     margin-right: 10px;
 }
 
@@ -365,17 +365,12 @@ header .nav-button:hover {
     color: var(--color-text-dark);
 }
 
-/* FIX: Top selection cards take full width on smaller screens */
+/* FIX: Ensure cards don't cause overflow on very small screens */
 @media (max-width: 768px) {
     .top-selection-card {
-        min-width: 90%; /* Allows it to shrink slightly on smaller tablets */
+        min-width: unset; /* Override the fixed desktop min-width */
+        width: 100%;
         flex: 1 1 100%;
-        margin-bottom: 20px;
-    }
-}
-@media (max-width: 450px) {
-    .top-selection-card {
-        min-width: 100%; 
     }
 }
 
@@ -384,9 +379,9 @@ header .nav-button:hover {
 #story{
     background-color: var(--color-primary);
     border-radius: 10px;
-    padding: 60px 40px;
+    padding: 60px 40px; /* Increased padding */
     text-align: center;
-    width: 90%;
+    width: 90%; /* Wider story section */
     max-width: 1000px;
     color: white;
     margin: 60px auto;
@@ -423,19 +418,19 @@ header .nav-button:hover {
     background-color: #fff;
 }
 .meat-card-container {
-    /* FIX: Changed from flex to responsive CSS Grid for perfect layout flow */
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    /* Retained flex/wrap setup, which works well for responsiveness */
+    display: flex;
+    justify-content: center;
     gap: 25px;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    /* Removed justify-content: center; as grid handles it better */
 }
 .meat-card-item {
-    /* REMOVED: flex: 1 1 250px; as grid handles sizing now */
+    flex: 1 1 250px; 
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow */
     overflow: hidden;
     text-align: center;
     padding-bottom: 20px;
@@ -446,28 +441,28 @@ header .nav-button:hover {
 }
 .meat-card-item img {
     width: 100%;
-    height: 220px;
+    height: 220px; /* Taller images */
     object-fit: cover;
     margin-bottom: 10px;
     transition: transform 0.5s ease;
 }
 .meat-card-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Subtle hover zoom effect */
 }
 .meat-card-item h4 {
     color: var(--color-primary);
     font-size: 1.3em;
     margin-bottom: 0.5rem;
     font-weight: 700;
-    display: flex;
+    display: flex; /* Enable flex for icon/text alignment */
     align-items: center;
     justify-content: center;
 }
 
 /* STYLING FOR FONT AWESOME ICONS in MEAT CARDS */
 .feature-meat-icon {
-    font-size: 1em;
-    color: var(--color-secondary);
+    font-size: 1em; /* Keep icon size relative to text */
+    color: var(--color-secondary); /* Use accent color for card icons */
     margin-right: 8px;
 }
 
@@ -482,15 +477,17 @@ header .nav-button:hover {
 #delivery-section{
     margin-top: 50px;
     width: 100%;
+    /* FIX: Ensure no element goes outside the viewport */
+    max-width: 100%;
 }
 .delivery-overlay{
-    background-color: rgba(4, 4, 3, 0.75);
-    height: 250px;
+    background-color: rgba(4, 4, 3, 0.75); /* Slightly darker overlay */
+    height: 250px; /* Taller section */
     width: 100%;
     color: white;
-    text-align: right;
+    text-align: right; /* Default right alignment for desktop */
     padding: 30px;
-    display: flex;
+    display: flex; /* Use flex to align content */
     flex-direction: column;
     justify-content: center;
 }
@@ -516,24 +513,37 @@ header .nav-button:hover {
 .delivery-overlay p{
     font-size: 1rem;
     max-width: 600px;
-    margin-left: auto;
+    margin-left: auto; /* Push text to the right */
 }
+/* FIX: Comprehensive mobile handling for the delivery section */
 @media (max-width: 768px) {
+    .delivery-section-wrapper {
+        height: auto; /* Allow the wrapper height to expand with content */
+        min-height: 200px; /* Ensures the background image is always visible */
+    }
     .delivery-overlay {
-        text-align: center;
-        height: auto; /* Allow height to adjust on mobile */
-        padding: 40px 20px;
+        text-align: center; /* Center text on mobile */
+        height: auto; /* Allow overlay height to adapt */
+        padding: 40px 20px; /* Increase vertical padding for better spacing */
+    }
+    .delivery-overlay h2 {
+        font-size: 2rem;
+    }
+    .delivery-overlay h3 {
+        font-size: 1.2rem;
     }
     .delivery-overlay p{
+        /* Overrides the desktop margin-left: auto to center the text */
         margin-left: auto;
         margin-right: auto;
+        max-width: 95%; /* Ensures paragraph content respects screen size */
     }
 }
 
 
 /* FOOTER SPACER STYLING */
 .footer-spacer {
-    height: 40px;
+    height: 40px; /* Reduced spacer */
     width: 100%;
     background-color: transparent;
 }
@@ -543,7 +553,7 @@ header .nav-button:hover {
 .main-footer {
     background-color: var(--color-primary);
     color: #fff;
-    padding: 30px 40px;
+    padding: 30px 40px; /* Increased padding */
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
@@ -565,7 +575,7 @@ header .nav-button:hover {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Increased gap */
     margin-bottom: 10px;
 }
 .main-footer .footer-nav ul li a {
@@ -610,7 +620,7 @@ header .nav-button:hover {
 .main-footer .footer-bottom {
     width: 100%;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 15px; /* More padding */
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: 15px;
     font-size: 0.85rem;
@@ -621,7 +631,6 @@ header .nav-button:hover {
     .main-footer {
         flex-direction: column;
         text-align: center;
-        padding: 30px 20px;
     }
     .main-footer > div {
         width: 100%;
