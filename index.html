@@ -39,7 +39,7 @@
             <div class="hero-content">
                 <h1>Moyaliso Meat Supplier</h1>
                 <h2>Delivering Freshness and Quality, Every Time.</h2>
-                <button><a href="meat_section.html" class="cta-button">View Our Meats</a></button>
+                <button><a href="#top-selections" class="cta-button">View Our Meats</a></button>
             </div>
         </section>
 
@@ -175,7 +175,7 @@
             <ul>
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#story">About Us</a></li>
-                <li><a href="meat_section.html">Meat Options</a></li>
+                <li><a href="#top-selections">Meat Options</a></li>
                 <li><a href="index.html#delivery-section">Delivery</a></li>
             </ul>
         </nav>
@@ -185,7 +185,7 @@
             </a>
             <address class="footer-address">
                 <p><i class="fas fa-envelope"></i> info@moyalisomeat.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> [Your Actual Location Placeholder]</p>
+                <p><i class="fas fa-map-marker-alt"></i> [Location Placeholder]</p>
             </address>
         </div>
         <div class="footer-bottom">
@@ -210,8 +210,6 @@
                 });
             });
         });
-
-        // WhatsApp Order Logic
         function sendToWhatsApp() {
             const name = document.getElementById('name').value;
             const location = document.getElementById('location').value;
@@ -222,7 +220,7 @@
                 return;
             }
 
-            const phoneNumber = "254712345678"; // Your WhatsApp number
+            const phoneNumber = "254790245047"; 
             const message = `*New Order from Moyaliso*%0A%0A*Name:* ${name}%0A*Location:* ${location}%0A*Order:* ${details}`;
             
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
