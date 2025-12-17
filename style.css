@@ -628,6 +628,10 @@ header .nav-button:hover {
 
 /* Footer Responsiveness */
 @media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+    }
     .main-footer {
         flex-direction: column;
         text-align: center;
@@ -641,5 +645,94 @@ header .nav-button:hover {
     }
     .main-footer .footer-contact-info {
         text-align: center;
+    }
+}
+
+
+
+/* CONTACT FORM SECTION STYLING */
+.contact-form-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background: var(--color-background-light);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--color-shadow);
+    text-align: center;
+}
+
+.form-container h2 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.form-container p {
+    margin-bottom: 30px;
+    color: var(--color-text-dark);
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+}
+
+.whatsapp-submit-btn {
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.whatsapp-submit-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Form Responsiveness */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 25px 20px;
+    }
+    .form-container h2 {
+        font-size: 1.6rem;
     }
 }

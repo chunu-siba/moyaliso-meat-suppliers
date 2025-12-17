@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#story">About Us</a></li>
-                <li><a href="meat_section.html">Meat Options</a></li>
+                <li><a href="#top-selections">Meat Options</a></li>
                 <li><a href="index.html#delivery-section">Delivery</a></li>
                 <li><a href="tel:+254712345678" class="nav-button">
                     <i class="fas fa-phone"></i> +254 712 345 678
@@ -37,7 +37,7 @@
             <div class="hero-overlay"></div>
         
             <div class="hero-content">
-                <h1>Moyaliso Meat Suppliers</h1>
+                <h1>Moyaliso Meat Supplier</h1>
                 <h2>Delivering Freshness and Quality, Every Time.</h2>
                 <button><a href="meat_section.html" class="cta-button">View Our Meats</a></button>
             </div>
@@ -101,7 +101,7 @@
                 </article>
                 <article class="meat-card-item">
                     <img src="images/beef.jpg" alt="Dormer Meat">
-                    <h4></i> Dormer Meat</h4>
+                    <h4></i> Dorper Meat</h4>
                     <p>A premium, lean selection with a superior texture for grilling and roasting.</p>
                 </article>
                 <article class="meat-card-item">
@@ -120,7 +120,7 @@
         <section id="story" class="story-section full-width-section">
             <div class="story-content-wrapper">
                 <h2>Our Story</h2>
-                <p>Moyaliso Meat Suppliers is built on the foundation of unwavering quality. We source our livestock from trusted Kenyan farms, ensuring ethical treatment and superior meat products. Our commitment is to deliver freshness that you can taste.</p>
+                <p>Moyaliso Meat Supplier is built on the foundation of unwavering quality. We source our livestock from trusted Kenyan farms, ensuring ethical treatment and superior meat products. Our commitment is to deliver freshness that you can taste.</p>
                 <p>From prime cuts of Goat and Mutton to specialized Dormer meat and traditional offals, every product is handled with the utmost care, guaranteeing hygienic standards and perfect preparation.</p>
                 <p>Our dedicated team works tirelessly to maintain a pristine cold chain and ensure every order is packaged and delivered right on time, ensuring your meat arrives fresh and chilled.</p>
             </div>
@@ -140,6 +140,30 @@
                 </div>
             </div>
         </section>    
+
+        <section id="contact-form-section" class="contact-form-section">
+            <div class="form-container">
+                <h2>Place Your Order</h2>
+                <p>Fill out the details below to send your order directly to our WhatsApp.</p>
+                <form id="whatsapp-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Delivery Location</label>
+                        <input type="text" id="location" placeholder="Where should we deliver?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-details">Order Details (e.g., 2kg Goat Meat, 1kg Liver)</label>
+                        <textarea id="order-details" rows="4" placeholder="List the items you wish to order..." required></textarea>
+                    </div>
+                    <button type="button" class="whatsapp-submit-btn" onclick="sendToWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> Send Order via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </section>
         
         <div class="footer-spacer"></div>
     </main>
@@ -188,6 +212,24 @@
                 });
             });
         });
+
+        // WHATSAPP REDIRECTION SCRIPT
+        function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const location = document.getElementById('location').value;
+            const details = document.getElementById('order-details').value;
+            
+            if(!name || !location || !details) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const phoneNumber = "254790245047"; // Update this to your WhatsApp number (format: 254...)
+            const message = `*New Order from Moyaliso*%0A%0A*Name:* ${name}%0A*Location:* ${location}%0A*Order:* ${details}`;
+            
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank').focus();
+        }
     </script>
 </body>
 </html>
