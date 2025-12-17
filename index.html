@@ -67,10 +67,10 @@
                 </div>
             </div>
         </section>
+
         <section class="meat-group-section" id="top-selections">
             <h2>Our Premium Meat Options</h2>
             <div class="top-selection-container">
-                
                 <article class="top-selection-card">
                     <div class="card-content">
                         <h3><i class="fas fa-sheep top-selection-icon"></i> Goat Meat / Sheep Meat</h3>
@@ -101,7 +101,7 @@
                 </article>
                 <article class="meat-card-item">
                     <img src="images/beef.jpg" alt="Dormer Meat">
-                    <h4></i> Dorper Meat</h4>
+                    <h4> Dorper Meat</h4>
                     <p>A premium, lean selection with a superior texture for grilling and roasting.</p>
                 </article>
                 <article class="meat-card-item">
@@ -129,9 +129,7 @@
         <section id="delivery-section" class="delivery-section-wrapper">
             <div id="delivery" class="delivery-section">
                 <div class="delivery-overlay">
-                    <div class="delivery-image-placeholder">
-                    </div>
-                
+                    <div class="delivery-image-placeholder"></div>
                     <div class="delivery-text-box">
                         <h2>Fast & Fresh Delivery</h2>
                         <h3 class="delivery-promo">FREE DELIVERY for Qualifying Products</h3>
@@ -213,7 +211,7 @@
             });
         });
 
-        // WHATSAPP REDIRECTION SCRIPT
+        // WhatsApp Order Logic
         function sendToWhatsApp() {
             const name = document.getElementById('name').value;
             const location = document.getElementById('location').value;
@@ -224,7 +222,7 @@
                 return;
             }
 
-            const phoneNumber = "254790245047"; // Update this to your WhatsApp number (format: 254...)
+            const phoneNumber = "254712345678"; // Your WhatsApp number
             const message = `*New Order from Moyaliso*%0A%0A*Name:* ${name}%0A*Location:* ${location}%0A*Order:* ${details}`;
             
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
