@@ -296,6 +296,7 @@ header .nav-button:hover {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    padding: 22px;
 }
 
 /* Intestines Full Width row */
