@@ -51,9 +51,6 @@ header .logo {
     display: flex;
     align-items: center;
 }
-header .logo i {
-    margin-right: 0.5rem;
-}
 header .main-nav ul {
     list-style: none;
     display: flex;
@@ -86,9 +83,6 @@ header .nav-button:hover {
 }
 .nav-toggle {
     display: none;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
 }
 
 /* HERO SECTION */
@@ -121,33 +115,28 @@ header .nav-button:hover {
     padding: 20px;
 }
 .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Responsive typography */
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     font-weight: 900;
 }
 .hero-content h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
     color: var(--color-secondary);
     margin-bottom: 2rem;
     font-weight: 300;
 }
 .hero-content button {
     background-color: var(--color-secondary);
-    color: var(--color-primary);
     padding: 1rem 2rem;
     font-size: 1.25em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: 700;
-    transition: background-color 0.3s ease;
 }
 .hero-content button a {
     color: var(--color-primary);
-}
-.hero-content button:hover {
-    background-color: #ffc400;
 }
 
 /* FEATURE ICONS SECTION */
@@ -158,8 +147,8 @@ header .nav-button:hover {
 }
 .feature-icons-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Better responsiveness */
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -170,13 +159,9 @@ header .nav-button:hover {
     align-items: center;
 }
 .feature-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--color-text-dark);
     margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
-.feature-item:hover .feature-icon {
-    color: var(--color-primary);
 }
 .feature-item p {
     font-size: 0.9rem; 
@@ -189,14 +174,14 @@ header .nav-button:hover {
     text-align: center;
 }
 .meat-group-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--color-primary);
     margin-bottom: 40px;
     position: relative;
 }
 .meat-group-section h2::after {
     content: '';
-    width: 80px;
+    width: 60px;
     height: 4px;
     background: var(--color-secondary);
     position: absolute;
@@ -207,35 +192,26 @@ header .nav-button:hover {
 .top-selection-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
 }
 .top-selection-card {
-    flex: 1 1 45%;
-    min-width: 350px;
+    flex: 1 1 400px;
     background-color: #fff;
     border-left: 6px solid var(--color-secondary);
     border-radius: 0.5rem;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: left;
-    transition: transform 0.3s ease;
-}
-.top-selection-card:hover {
-    transform: translateY(-8px);
-}
-.top-selection-icon {
-    color: var(--color-secondary);
-    margin-right: 10px;
 }
 
 /* STORY SECTION */
 #story {
     background-color: var(--color-primary);
     border-radius: 10px;
-    padding: 60px 40px;
+    padding: 50px 30px;
     text-align: center;
     width: 90%;
     max-width: 1000px;
@@ -244,7 +220,7 @@ header .nav-button:hover {
 }
 #story h2 {
     color: var(--color-secondary);
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
@@ -254,82 +230,71 @@ header .nav-button:hover {
     background-color: #fff;
 }
 .meat-card-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Dynamic grid */
     gap: 25px;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
 }
 .meat-card-item {
-    flex: 1 1 250px; 
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    text-align: center;
-    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
-}
-.card-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 15px;
 }
 .meat-card-item img {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    margin-bottom: 10px;
-    transition: transform 0.5s ease;
 }
-.meat-card-item:hover img {
-    transform: scale(1.05);
+.card-body {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-/* BUTTON GROUP STYLING */
 .card-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding: 15px;
-    margin-top: auto; 
+    margin-top: 15px;
 }
-
-.btn-order{
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    padding: 10px 0;
-    border: none;
+.btn-order, .btn-call {
+    padding: 10px 5px;
+    border-radius: 4px;
     font-weight: 700;
     cursor: pointer;
-    width: 100%;
-    transition: background-color 0.5s ease, transform 0.2s ease;    
+    font-size: 0.9rem;
 }
-.btn-call{
+.btn-order {
+    background-color: var(--color-secondary);
+    border: none;
+}
+.btn-call {
     background-color: transparent;
     border: 2px solid var(--color-primary);
 }
 
-.action-btn:hover { opacity: 0.9; transform: scale(1.02); }
-
 /* DELIVERY SECTION */
 .delivery-section-wrapper {
     width: 100%;
-    background-image: url(images/meat\ delivery\ van.jpg);
-    height: 250px;
-    background-position: right;
+    background-image: url('images/meat delivery van.jpg');
+    height: 300px;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .delivery-overlay {
-    background-color: rgba(4, 4, 3, 0.75);
+    background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
     width: 100%;
     color: white;
-    text-align: right;
-    padding: 30px;
+    text-align: center;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -338,167 +303,110 @@ header .nav-button:hover {
 /* ORDER FORM */
 .contact-form-section {
     padding: 60px 20px;
-    display: flex;
-    justify-content: center;
 }
 .form-container {
-    width: 100%;
     max-width: 600px;
-    background: var(--color-background-light);
-    padding: 40px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--color-shadow);
-    text-align: center;
 }
 .form-group {
-    text-align: left;
     margin-bottom: 20px;
 }
 .form-group label {
     display: block;
-    font-weight: 600;
     margin-bottom: 8px;
     color: var(--color-primary);
+    font-weight: 600;
 }
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    outline: none;
 }
 .whatsapp-submit-btn {
     background-color: #25D366;
     color: white;
-    padding: 15px 30px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
+    width: 100%;
     font-weight: 700;
     cursor: pointer;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    transition: background-color 0.3s ease;
-}
-.whatsapp-submit-btn:hover {
-    background-color: #128C7E;
-}
-
-/* KEYFRAMES FOR ANIMATION */
-@keyframes logoFloat {
-    0%, 100% { transform: translateY(0);}
-    50% { transform: translateY(-10px); }
 }
 
 /* FOOTER */
 .main-footer {
     background-color: var(--color-primary);
     color: #fff;
-    padding: 30px 40px;
+    padding: 40px 20px;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    gap: 30px;
 }
-.main-footer .footer-logo {
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    /* Apply up and down animation */
-    animation: logoFloat 3s ease-in-out infinite;
-}
-.main-footer .footer-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-.main-footer .footer-nav ul li a {
-    color: #fff;
-}
-.main-footer .footer-contact-info {
-    text-align: right;
-}
-.main-footer .footer-bottom {
+.footer-logo h1 { font-size: 1.8rem; }
+.footer-nav ul { list-style: none; display: flex; gap: 15px; }
+.footer-nav ul li a { color: #fff; }
+.footer-bottom {
     width: 100%;
     text-align: center;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
 }
 
+/* TABLET & MOBILE RESPONSIVENESS */
+@media (max-width: 992px) {
+    header { padding: 0.8rem 1rem; }
+    .top-selection-card { flex: 1 1 100%; }
+}
 
-/* MOBILE RESPONSIVENESS (Animation & Centering Fixes) */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
+        z-index: 1001;
     }
     header .main-nav ul {
         display: none;
         flex-direction: column;
-        width: 100%;
         position: absolute;
         top: 4.5rem;
         left: 0;
-        background-color: rgba(82, 5, 5, 0.95);
+        width: 100%;
+        background-color: var(--color-primary);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
     }
     header .main-nav ul.nav-open {
         display: flex;
     }
-    .hero-content h1 { font-size: 2.5rem; }
-    /* .feature-icons-container { grid-template-columns: repeat(2, 1fr); } */
-    .top-selection-card { min-width: unset; width: 100%; }
-    
+    header .main-nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
     .main-footer {
         flex-direction: column;
         text-align: center;
     }
-    /* FIX: Center the footer logo on mobile */
-    .main-footer .footer-logo {
+    .main-footer .footer-nav ul {
         justify-content: center;
-        width: 100%;
     }
     .main-footer .footer-contact-info {
         text-align: center;
-        width: 100%;
-    }
-    .main-footer .footer-nav ul {
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    .delivery-overlay {
-        text-align: center;
-    }
-    .delivery-overlay p {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
-
-
-
-@media screen and (max-width: 480px) {
-    .logo h1{
-        font-size:2.3rem;
-        text-decoration: underline;
-        font-style: italic;
-        text-transform: capitalize;
-        margin-left: 0;
-        padding-left: 0;
-    }
-    .feature-icons-container {
-        grid-template-columns: 1fr;
-    }
-    .hero-content h1 {
-        font-size: 2.1rem;
-    }
-    .hero-content h2{
-        font-size:1.42rem;
-    }
+@media (max-width: 480px) {
+    .logo h1 { font-size: 1.5rem; }
+    .hero-content h1 { font-size: 2rem; }
+    .feature-icons-container { grid-template-columns: 1fr 1fr; }
+    .meat-card-container { grid-template-columns: 1fr; }
 }
