@@ -282,14 +282,14 @@ header .nav-button:hover {
 .meat-card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    max-width: 1200px;
+    justify-content:center;
+    gap: 20px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .meat-card-item {
-    flex: 1 1 300px;
+    flex: 0 1 300px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -300,9 +300,21 @@ header .nav-button:hover {
 
 /* Intestines Full Width row */
 #full-width {
-    flex: 1 1 100% !important;
+    flex: 0 1 60% !important;
+    padding-top: 1.2em;
 }
 
+#full-width .card-image-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+#full-width .card-image-wrapper img{
+    height: 250px;
+
+    object-fit: cover;
+    border: none;
+}
 .meat-card-item img {
     width: 100%;
     height: 250px;
@@ -423,7 +435,7 @@ header .nav-button:hover {
 .main-footer {
     background-color: var(--color-primary);
     color: #fff;
-    padding: 40px 5%;
+    padding: 20px 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -431,12 +443,11 @@ header .nav-button:hover {
 }
 
 .main-footer .footer-logo {
-    color: #fff;
-    font-size: 1.8rem;
+    color: #ffffff;
+    font-size: 1.5rem;
     font-weight: 700;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
     animation: logoFloat 3s ease-in-out infinite;
 }
 
@@ -444,10 +455,31 @@ header .nav-button:hover {
     width: 100%;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: 20px;
-    padding-top: 20px;
 }
-
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 7px ;
+}
+.footer-nav ul li a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+.footer-contact-info address {
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.footer-contact-info address a {
+    color: #fff;
+    text-decoration: underline;
+}
 /* RESPONSIVE MEDIA QUERIES */
 
 /* Tablet Adjustments */
@@ -495,5 +527,8 @@ header .nav-button:hover {
     .main-footer {
         flex-direction: column;
         text-align: center;
+    }
+    #full-width {
+        flex: 1 1 100% !important;
     }
 }
