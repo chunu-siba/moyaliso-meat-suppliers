@@ -84,6 +84,12 @@ header .nav-button {
 header .nav-button:hover {
     background-color: #ffc400 !important;
 }
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
 
 /* HERO SECTION */
 .hero-section {
@@ -266,6 +272,12 @@ header .nav-button:hover {
     display: flex;
     flex-direction: column;
 }
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px;
+}
 .meat-card-item img {
     width: 100%;
     height: 220px;
@@ -284,12 +296,7 @@ header .nav-button:hover {
     padding: 15px;
     margin-top: auto; 
 }
-.card-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* This tells the body to take up all available vertical space */
-    padding: 15px;
-}
+
 .btn-order{
     background-color: var(--color-secondary);
     color: var(--color-primary);
@@ -423,12 +430,8 @@ header .nav-button:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: 15px;
 }
-.nav-toggle {
-    display: none;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-}
+
+
 /* MOBILE RESPONSIVENESS (Animation & Centering Fixes) */
 @media (max-width: 768px) {
     .nav-toggle {
@@ -476,6 +479,9 @@ header .nav-button:hover {
         margin-right: auto;
     }
 }
+
+
+
 
 @media screen and (max-width: 480px) {
     .logo h1{
