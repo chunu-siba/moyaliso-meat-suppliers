@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moyaliso Meat Suppliers - Final Professional Design</title>
+    <title>Moyaliso Meat Suppliers - Premium Quality Meat</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -11,16 +11,15 @@
 
     <header class="main-header">
         <div class="logo">
-            <i class="fas fa-knife"></i> 
             <h1>Moyaliso</h1>
         </div>
         
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#story">About Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">About Us</a></li>
                 <li><a href="#top-selections">Meat Options</a></li>
-                <li><a href="index.html#delivery-section">Delivery</a></li>
+                <li><a href="#delivery-section">Delivery</a></li>
                 <li><a href="tel:+254712345678" class="nav-button">
                     <i class="fas fa-phone"></i> +254 712 345 678
                 </a></li>
@@ -28,42 +27,41 @@
         </nav>
         
         <div class="nav-toggle">
-            <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+            <i class="fa-solid fa-bars hamburger-menu" style="color:white; cursor: pointer; font-size: 1.5rem;"></i>
         </div>
     </header>
 
     <main>
         <section id="home" class="hero-section">
             <div class="hero-overlay"></div>
-        
             <div class="hero-content">
                 <h1>Moyaliso Meat Supplier</h1>
                 <h2>Delivering Freshness and Quality, Every Time.</h2>
-                <button><a href="#top-selections" class="cta-button">View Our Meats</a></button>
+                <button class="cta-button"><a href="#whatsapp-form" >place Order!</a></button>
             </div>
         </section>
 
         <section class="feature-icons-section">
             <div class="feature-icons-container">
                 <div class="feature-item">
-                    <i class="fas fa-award feature-icon" aria-hidden="true"></i>
-                    <p>Certified Quality Meat</p>
+                    <i class="fas fa-award feature-icon"></i>
+                    <p>Certified Quality</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-shield-virus feature-icon" aria-hidden="true"></i>
-                    <p>Strict Hygiene Standards</p>
+                    <i class="fas fa-shield-virus feature-icon"></i>
+                    <p>Strict Hygiene</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-utensils feature-icon" aria-hidden="true"></i>
-                    <p>Expert Master Butchery</p>
+                    <i class="fas fa-utensils feature-icon"></i>
+                    <p>Master Butchery</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-thermometer-half feature-icon" aria-hidden="true"></i>
-                    <p>Temperature Controlled</p>
+                    <i class="fas fa-thermometer-half feature-icon"></i>
+                    <p>Temp. Controlled</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-route feature-icon" aria-hidden="true"></i>
-                    <p>Farm-to-Table Traceability</p>
+                    <i class="fas fa-route feature-icon"></i>
+                    <p>Farm-to-Table</p>
                 </div>
             </div>
         </section>
@@ -73,15 +71,15 @@
             <div class="top-selection-container">
                 <article class="top-selection-card">
                     <div class="card-content">
-                        <h3><i class="fas fa-sheep top-selection-icon"></i> Goat Meat / Sheep Meat</h3>
+                        <h3> Goat & Sheep/Dorper</h3>
                         <p>The primary offerings: high-quality cuts for retail and wholesale. Available as whole carcass or custom cuts.</p>
                     </div>
                 </article>
 
                 <article class="top-selection-card">
                     <div class="card-content">
-                        <h3><i class="fas fa-liver"></i> Liver, Intestines & Stomach</h3>
-                        <p>Our traditional offal selection. Carefully cleaned and prepared, perfect for local delicacies and rich stews.</p>
+                        <h3> liver/stomach and intestines</h3>
+                        <p>Our traditional selection including liver, intestines, and stomach. Carefully cleaned and prepared daily.</p>
                     </div>
                 </article>
             </div>
@@ -90,59 +88,117 @@
         <section class="meat-card-display-section">
             <div class="meat-card-container">
                 <article class="meat-card-item">
-                    <img src="images/goat.jpg" alt="Goat Meat">
-                    <h4> Goat Meat</h4>
-                    <p>Tender and flavorful prime cuts, sourced from ethical Kenyan farms.</p>
+                    <div class="card-image-wrapper">
+                        <img src="images/goat.jpg" alt="Goat Meat">
+                    </div>
+                    <div class="card-body">
+                        <h4>Goat Meat</h4>
+                        <p>Tender and flavorful prime cuts, sourced from ethical Kenyan farms.</p>
+                        <div class="card-actions">
+                            <button class="btn-order">
+                                <a href="#contact-form-section" >Order Now</a>
+                            </button>
+                            <button class="btn-call">
+                                <a href="tel:+254712345678" ><i class="fas fa-phone"></i> Call</a>
+                            </button>
+                        </div>
+                    </div>
                 </article>
+
                 <article class="meat-card-item">
-                    <img src="images/mutton.jpg" alt="Mutton Cuts">
-                    <h4> Mutton</h4>
-                    <p>Rich, mature flavor ideal for slow cooking and hearty traditional dishes.</p>
+                    <div class="card-image-wrapper">
+                        <img src="images/mutton.jpg" alt="Mutton Cuts">
+                    </div>
+                    <div class="card-body">
+                        <h4>Mutton</h4>
+                        <p>Rich, mature flavor ideal for slow cooking and hearty traditional dishes.</p>
+                        <div class="card-actions">
+                            <button class="btn-order">
+                                <a href="#contact-form-section" >Order Now</a>
+                            </button>
+                            <button class="btn-call">
+                                <a href="tel:+254712345678" ><i class="fas fa-phone"></i> Call</a>
+                            </button>
+                        </div>
+                    </div>
                 </article>
+
                 <article class="meat-card-item">
-                    <img src="images/beef.jpg" alt="Dormer Meat">
-                    <h4> Dorper Meat</h4>
-                    <p>A premium, lean selection with a superior texture for grilling and roasting.</p>
+                    <div class="card-image-wrapper">
+                        <img src="images/beef.jpg" alt="Dorper Meat">
+                    </div>
+                    <div class="card-body">
+                        <h4>Dorper Meat</h4>
+                        <p>A premium, lean selection with a superior texture for grilling and roasting.</p>
+                        <div class="card-actions">
+                            <button class="btn-order">
+                                <a href="#contact-form-section" >Order Now</a>
+                            </button>
+                            <button class="btn-call">
+                                <a href="tel:+254712345678" ><i class="fas fa-phone"></i> Call</a>
+                            </button>
+                        </div>
+                    </div>
                 </article>
+
                 <article class="meat-card-item">
-                    <img src="images/liver.jpg" alt="Fresh Liver">
-                    <h4> Fresh Liver</h4>
-                    <p>Nutrient-rich liver, excellent for frying, stewing, or preparing traditional Kenyan breakfast meals.</p>
+                    <div class="card-image-wrapper">
+                        <img src="images/liver.jpg" alt="Fresh Liver">
+                    </div>
+                    <div class="card-body">
+                        <h4>Fresh Liver</h4>
+                        <p>Nutrient-rich liver, excellent for frying, stewing, or traditional breakfast meals.</p>
+                        <div class="card-actions">
+                            <button class="btn-order">
+                                <a href="#contact-form-section" >Order Now</a>
+                            </button>
+                            <button class="btn-call">
+                                <a href="tel:+254712345678" ><i class="fas fa-phone"></i> Call</a>
+                            </button>
+                        </div>
+                    </div>
                 </article>
-                <article class="meat-card-item">
-                    <img src="images/intestines.jpg" alt="Intestines and Stomach">
-                    <h4>Intestines & Stomach</h4>
-                    <p>Thoroughly cleaned and prepared offals, essential for favorite local specialties like mutura and tripe dishes.</p>
+
+                <article class="meat-card-item" id="full-width">
+                    <div class="card-image-wrapper">
+                        <img src="images/intestines.jpg" alt="Intestines and Stomach">
+                    </div>
+                    <div class="card-body">
+                        <h4>Intestines & Stomach</h4>
+                        <p>Thoroughly cleaned offals, essential for local favorites like mutura and tripe dishes.</p>
+                        <div class="card-actions">
+                            <button class="btn-order">
+                                <a href="#contact-form-section" >Order Now</a>
+                            </button>
+                            <button class="btn-call">
+                                <a href="tel:+254712345678" ><i class="fas fa-phone"></i> Call</a>
+                            </button>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
         
-        <section id="story" class="story-section full-width-section">
+        <section id="story" class="story-section">
             <div class="story-content-wrapper">
                 <h2>Our Story</h2>
-                <p>Moyaliso Meat Supplier is built on the foundation of unwavering quality. We source our livestock from trusted Kenyan farms, ensuring ethical treatment and superior meat products. Our commitment is to deliver freshness that you can taste.</p>
-                <p>From prime cuts of Goat and Mutton to specialized Dormer meat and traditional offals, every product is handled with the utmost care, guaranteeing hygienic standards and perfect preparation.</p>
-                <p>Our dedicated team works tirelessly to maintain a pristine cold chain and ensure every order is packaged and delivered right on time, ensuring your meat arrives fresh and chilled.</p>
+                <p>Moyaliso Meat Supplier is built on the foundation of unwavering quality. We source our livestock from trusted Kenyan farms, ensuring ethical treatment and superior meat products.</p>
+                <p>From prime cuts of Goat and Mutton to specialized Dorper meat, every product is handled with the utmost care, guaranteeing hygienic standards and perfect preparation.</p>
             </div>
         </section>
 
         <section id="delivery-section" class="delivery-section-wrapper">
-            <div id="delivery" class="delivery-section">
-                <div class="delivery-overlay">
-                    <div class="delivery-image-placeholder"></div>
-                    <div class="delivery-text-box">
-                        <h2>Fast & Fresh Delivery</h2>
-                        <h3 class="delivery-promo">FREE DELIVERY for Qualifying Products</h3>
-                        <p>We understand that freshness is paramount. Our dedicated delivery service ensures **punctuality** and maintaining the optimum temperature of your order from our facility to your doorstep.</p>
-                    </div>
-                </div>
+            <div class="delivery-overlay">
+                <h2>Fast & Fresh Delivery</h2>
+                <h3 class="delivery-promo">FREE DELIVERY for Qualifying Orders</h3>
+                <p>We ensure punctuality and maintain optimum temperatures from our facility to your doorstep.</p>
             </div>
         </section>    
 
         <section id="contact-form-section" class="contact-form-section">
             <div class="form-container">
                 <h2>Place Your Order</h2>
-                <p>Fill out the details below to send your order directly to our WhatsApp.</p>
+                <p>Send your order details directly to our WhatsApp.</p>
                 <form id="whatsapp-form">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -153,43 +209,36 @@
                         <input type="text" id="location" placeholder="Where should we deliver?" required>
                     </div>
                     <div class="form-group">
-                        <label for="order-details">Order Details (e.g., 2kg Goat Meat, 1kg Liver)</label>
-                        <textarea id="order-details" rows="4" placeholder="List the items you wish to order..." required></textarea>
+                        <label for="order-details">Order Details</label>
+                        <textarea id="order-details" rows="4" placeholder="e.g., 2kg Goat Meat, 1kg Liver" required></textarea>
                     </div>
                     <button type="button" class="whatsapp-submit-btn" onclick="sendToWhatsApp()">
-                        <i class="fab fa-whatsapp"></i> Send Order via WhatsApp
+                        <i class="fab fa-whatsapp"></i> Send via WhatsApp
                     </button>
                 </form>
             </div>
         </section>
-        
-        <div class="footer-spacer"></div>
     </main>
 
-    <footer id="contact-us" class="main-footer">
+    <footer class="main-footer">
         <div class="footer-logo">
-            <i class="fas fa-knife"></i>
             <h1>Moyaliso</h1>
         </div>
         <nav class="footer-nav">
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#story">About Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">About Us</a></li>
                 <li><a href="#top-selections">Meat Options</a></li>
-                <li><a href="index.html#delivery-section">Delivery</a></li>
             </ul>
         </nav>
         <div class="footer-contact-info">
-            <a href="tel:+254712345678" class="footer-button">
-                <i class="fas fa-phone"></i> +254 712 345 678
-            </a>
-            <address class="footer-address">
+            <address>
                 <p><i class="fas fa-envelope"></i> info@moyalisomeat.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> [Location Placeholder]</p>
+                <p><i class="fas fa-phone"></i> +254 712 345 678</p>
             </address>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Moyaliso Meat Suppliers. All rights reserved.</p>
+            <p>&copy; 2025 Moyaliso Meat Suppliers.</p>
         </div>
     </footer>
 
@@ -204,12 +253,11 @@
             
             document.querySelectorAll('.main-nav a').forEach(link => {
                 link.addEventListener('click', () => {
-                    if (nav.classList.contains('nav-open')) {
-                        nav.classList.remove('nav-open');
-                    }
+                    nav.classList.remove('nav-open');
                 });
             });
         });
+
         function sendToWhatsApp() {
             const name = document.getElementById('name').value;
             const location = document.getElementById('location').value;
@@ -221,11 +269,9 @@
             }
 
             const phoneNumber = "254790245047"; 
-            const message = `*New Order from Moyaliso*%0A%0A*Name:* ${name}%0A*Location:* ${location}%0A*Order:* ${details}`;
-            
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-            window.open(whatsappUrl, '_blank').focus();
+            const message = `*New Order from Moyaliso.com*%0A%0A*Name:* ${name}%0A*Location:* ${location}%0A*Order:* ${details}`;
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
         }
     </script>
 </body>
-</html>
+</html> 

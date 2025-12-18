@@ -263,6 +263,8 @@ header .nav-button:hover {
     overflow: hidden;
     text-align: center;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .meat-card-item img {
     width: 100%;
@@ -274,6 +276,36 @@ header .nav-button:hover {
 .meat-card-item:hover img {
     transform: scale(1.05);
 }
+/* BUTTON GROUP STYLING */
+.card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    margin-top: auto; 
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* This tells the body to take up all available vertical space */
+    padding: 15px;
+}
+.btn-order{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 10px 0;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;    
+}
+.btn-call{
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+}
+
+.action-btn:hover { opacity: 0.9; transform: scale(1.02); }
 
 /* DELIVERY SECTION */
 .delivery-section-wrapper {
@@ -349,7 +381,7 @@ header .nav-button:hover {
 
 /* KEYFRAMES FOR ANIMATION */
 @keyframes logoFloat {
-    0%, 100% { transform: translateY(0); }
+    0%, 100% { transform: translateY(0);}
     50% { transform: translateY(-10px); }
 }
 
@@ -391,9 +423,17 @@ header .nav-button:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: 15px;
 }
-
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
 /* MOBILE RESPONSIVENESS (Animation & Centering Fixes) */
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
     header .main-nav ul {
         display: none;
         flex-direction: column;
@@ -407,7 +447,7 @@ header .nav-button:hover {
         display: flex;
     }
     .hero-content h1 { font-size: 2.5rem; }
-    .feature-icons-container { grid-template-columns: repeat(2, 1fr); }
+    /* .feature-icons-container { grid-template-columns: repeat(2, 1fr); } */
     .top-selection-card { min-width: unset; width: 100%; }
     
     .main-footer {
@@ -434,5 +474,25 @@ header .nav-button:hover {
     .delivery-overlay p {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo h1{
+        font-size:2.3rem;
+        text-decoration: underline;
+        font-style: italic;
+        text-transform: capitalize;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .feature-icons-container {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+    .hero-content h2{
+        font-size:1.42rem;
     }
 }
