@@ -309,10 +309,20 @@ header .nav-button:hover {
     display: flex;
     gap: 10px;
 }
-
+.mutton {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.mutton  .img{
+    width: 50%;
+    height: 250px;
+}
+.mutton .img img{
+    object-fit: cover;
+}
 #full-width .card-image-wrapper img{
     height: 250px;
-
     object-fit: cover;
     border: none;
 }
