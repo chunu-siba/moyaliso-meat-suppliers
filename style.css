@@ -526,7 +526,6 @@ header .nav-button:hover {
     .feature-item {
         width: 100%;
     }
-    
     .hero-content h1 { font-size: 2.5rem; }
     .hero-content h2 { font-size: 1.6rem;
     font-weight: 600  ; }
@@ -540,3 +539,9 @@ header .nav-button:hover {
     }
     
 }
+/* @media (max-width: 480px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content h2 { font-size: 1.6rem;
+    font-weight: 600  ; }
+
+} */
