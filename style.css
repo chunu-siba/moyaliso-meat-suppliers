@@ -527,8 +527,9 @@ header .nav-button:hover {
         width: 100%;
     }
     
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-content h2 { font-size: 1.4rem; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content h2 { font-size: 1.6rem;
+    font-weight: 600  ; }
     .meat-card-item { flex: 1 1 100%; }
     .main-footer {
         flex-direction: column;
