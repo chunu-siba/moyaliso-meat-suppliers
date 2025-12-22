@@ -286,6 +286,7 @@ header .nav-button:hover {
     gap: 20px;
     max-width: 1500px;
     margin: 0 auto;
+    align-items: center;
 }
 
 .meat-card-item {
@@ -297,17 +298,20 @@ header .nav-button:hover {
     display: flex;
     flex-direction: column;
     padding: 22px;
+    height: 550px;
 }
 
 /* Intestines Full Width row */
 #full-width {
     flex: 0 1 60% !important;
     padding-top: 1.2em;
+    height: auto;
 }
 
 #full-width .card-image-wrapper {
     display: flex;
     gap: 10px;
+    
 }
 
 .mutton .img img{
@@ -329,8 +333,25 @@ header .nav-button:hover {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 15px;
+    align-content: center;
 }
 
+
+/* ADDED PRICE TAG STYLING */
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin: 10px 0;
+    display: block;
+}
+
+/* Ensure actions stay below the price */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .btn-order {
     background-color: var(--color-secondary);
     color: var(--color-primary);
@@ -510,6 +531,9 @@ header .nav-button:hover {
         display: flex;
     }
     .top-selection-card { min-width: unset; width: 100%; }
+    #full-width {
+        flex: 1 1  50% !important;
+    }
 }
 
 /* Mobile Phone Adjustments */
@@ -539,9 +563,3 @@ header .nav-button:hover {
     }
     
 }
-/* @media (max-width: 480px) {
-    .hero-content h1 { font-size: 2.5rem; }
-    .hero-content h2 { font-size: 1.6rem;
-    font-weight: 600  ; }
-
-} */
