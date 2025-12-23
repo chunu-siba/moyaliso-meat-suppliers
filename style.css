@@ -552,4 +552,16 @@ header .nav-button:hover {
     .feature-icons-container { flex-direction: column; gap: 30px; }
     .hero-content h1 { font-size: 2.5rem; }
     #full-width { flex: 1 1 100% !important; }
-}
+    .main-footer {display: block;align-items: center;text-align: cnter;
+    }
+    .footer-nav{
+        width: 100%;
+    }
+    .footer-nav ul li{
+        padding: 5px;
+    }
+    .footer-logo h1{
+        width: 100%;
+        font-size: 3rem;
+    }
+} 
