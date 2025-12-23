@@ -530,6 +530,10 @@ header .nav-button:hover {
     font-weight: 600;
     padding: 2px;
 }
+.mail a{
+    color: gold;
+    padding: 10px;
+}
 /* RESPONSIVE */
 @media (max-width: 880px) {
     .modal-nav-btn { display: none; } /* Use swiping on mobile */
@@ -557,12 +561,16 @@ header .nav-button:hover {
     }
     .footer-nav{
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
-    .footer-nav ul li{
-        padding: 5px;
+    .footer-nav ul li {
+        font-size: 15px;
+        padding-bottom:10px
     }
     .footer-logo h1{
         width: 100%;
         font-size: 3rem;
     }
+
 } 
